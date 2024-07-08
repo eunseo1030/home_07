@@ -1,23 +1,24 @@
 package org.korealt;
 
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
-        System.out.println("== 3번 문제 ==");
+        for (int i = n ; i >= 1; i--) {
 
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
 
-        int firstnumber = 0;
-        int secondnumber = 1;
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.print(firstnumber + " ");
-
-            int nextnumber = firstnumber + secondnumber;
-            firstnumber = secondnumber;
-            secondnumber = nextnumber;
-
+            for (int j = i; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
         }
     }
-}
+    }
